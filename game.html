@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Digital</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Desafio Digital!</h1>
+        <p>Seu objetivo é adivinhar o número secreto!</p> <br>
+        
+        <div id="message"></div>
+        
+        <label for="guess">Digite seu palpite:</label>
+        <input type="number" id="guess" placeholder="Digite um número"> 
+        <button id="submit">Fazer Palpite</button>
+
+        <p id="hint"></p>
+
+        <div id="confetti" style="display:none;">🎉🎉🎉</div>
+    </div>
+  <audio id="victory-sound" src="acertos.mp3"></audio>
+
+    <script src="script2.Js"></script>
+</body>
+</html>

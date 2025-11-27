@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - JS</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!--Conteiner Principal-->
+       <div class="calculator">
+       <div class="top-buttons">
+            <button onclick="toggleHistory()">Histórico</button>
+            <a href="tabuada.html" class="tabuada-btn">Tabuada</a>
+            <a href="game.html" class="game-btn">
+                <img src="controle.png" alt="Game Icon">
+            </a>
+
+       </div>
+
+        
+        <input id="display" type="text" disabled/>
+        
+        <div>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="btn-clear" onclick="clearDisplay()">C</button>
+            
+        </div>
+        <div>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button id="btn-backspace" onclick="deleteLastChar()">⌫</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('/')">÷</button>
+            <button onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div>
+            <button onclick="appendToDisplay('**')">**</button>
+            <button onclick="calcularRaiz('√')">√</button>
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="appendToDisplay('*')">×</button>
+        </div>
+        <div>
+            <button class="btn-igual" onclick="calculateResult()">=</button>
+        </div>
+        <div id="history-panel">
+            <h3>Histórico</h3>
+            <button id="limpar-historico">Limpar Histórico</button>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
